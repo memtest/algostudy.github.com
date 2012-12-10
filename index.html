@@ -1,77 +1,100 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Algorithm Study : ALGORITHM" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Algorithm Study by algostudy</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Algorithm Study</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
-
   <body>
+    <div class="wrapper">
+      <header>
+        <h1>Algorithm Study</h1>
+        <p>ALGORITHM</p>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/algostudy">View on GitHub</a>
 
-          <h1 id="project_title">Algorithm Study</h1>
-          <h2 id="project_tagline">ALGORITHM</h2>
+        <p class="view"><a href="https://github.com/algostudy">View My GitHub Profile</a></p>
 
-        </header>
-    </div>
+      </header>
+      <section>
+        <h2>P001 : The 3n + 1 problem</h2>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
+<p>Consider the following algorithm to generate a sequence of numbers. Start with an integer n. If n is even, divide by 2. If n is odd, multiply by 3 and add 1. Repeat this process with the new value of n, terminating when n = 1. For example, the following sequence of numbers will be generated for n = 22:</p>
 
-<p>안녕하세요. 방진호입니다. 지금은 테스트 페이지입니다.
-정식 오픈은 2012년 12월 5일 입니다.</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<pre><code>22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1
 </code></pre>
 
-<blockquote>
-<blockquote>
-<hr>
-</blockquote>
-</blockquote>
+<p>It is conjectured (but not yet proven) that this algorithm will terminate at n = 1 for every integer n. Still, the conjecture holds for all integers up to at least 1, 000, 000.
+For an input n, the cycle-length of n is the number of numbers generated up to and including the 1. In the example above, the cycle length of 22 is 16. Given any two numbers i and j, you are to determine the maximum cycle length over all numbers between i and j, including both endpoints.</p>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.
-1. 1. </p>
+<h3>Input</h3>
 
-<h3>Designer Templates</h3>
+<p>The input will consist of a series of pairs of integers i and j, one pair of integers per line. All integers will be less than 1,000,000 and greater than 0.</p>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<h3>Output</h3>
 
-<h3>Rather Drive Stick?</h3>
+<p>For each pair of input integers i and j, output i, j in the same order in which they appeared in the input and then the maximum cycle length for integers between and including i and j. These three numbers should be separated by one space, with all three numbers on one line and with one line of output for each line of input.</p>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<h3>Sample Input</h3>
 
-<h3>Authors and Contributors</h3>
+<pre><code>1 10
+100 200
+201 210
+900 1000
+</code></pre>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<h3>Sample Output</h3>
 
-<h3>Support or Contact</h3>
+<pre><code>1 10 20
+100 200 125
+201 210 89
+900 1000 174
+</code></pre>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p>　
+　
+　</p>
+
+<h2>P002 : Jolly Jumpers</h2>
+
+<p>A sequence of n &gt; 0 integers is called a jolly jumper if the absolute values of the differences between successive elements take on all possible values 1 through n - 1. For instance,</p>
+
+<pre><code>1 4 2 3
+</code></pre>
+
+<p>is a jolly jumper, because the absolute differences are 3, 2, and 1, respectively. The definition implies that any sequence of a single integer is a jolly jumper. Write a program to determine whether each of a number of sequences is a jolly jumper.</p>
+
+<h3>Input</h3>
+
+<p>Each line of input contains an integer n &lt; 3, 000 followed by n integers representing the sequence.</p>
+
+<h3>Output</h3>
+
+<p>For each line of input generate a line of output saying "Jolly" or "Not jolly".</p>
+
+<h3>Sample Input</h3>
+
+<pre><code>4 1 4 2 3
+5 1 4 2 -1 6
+</code></pre>
+
+<h3>Sample Output</h3>
+
+<pre><code>Jolly
+Not jolly
+</code></pre>
       </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
-
+    <script src="javascripts/scale.fix.js"></script>
     
-
   </body>
 </html>
