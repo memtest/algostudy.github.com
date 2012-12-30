@@ -19,8 +19,7 @@
         <p>ALGORITHM</p>
 
 
-        <p class="view"><a href="http://64.23.76.89">Web SSH</a></p>
-        <p class="view"><a href="http://github.com/algostudy/algorithm">Code Review</a></p>
+        <p class="view"><a href="https://github.com/algostudy">View My GitHub Profile</a></p>
 
       </header>
       <section>
@@ -58,74 +57,58 @@
 <p>작성하신 코드는 매주 일요일 11:59 PM 이후에 github로 자동 commit됩니다. 일주일이 지나면 남이 작성한 코드를 볼 수 있으며 github 계정을 통하여 각자 커멘트를 달거나 코드를 수정하실 수 있습니다.
 　
 　</p>
-　<p>
-　  
-　</p>
 
-<h2>P001 : The 3n + 1 problem</h2>
+<h2>P003 : WERTYU</h2>
 
-<hr><p>Consider the following algorithm to generate a sequence of numbers. Start with an integer n. If n is even, divide by 2. If n is odd, multiply by 3 and add 1. Repeat this process with the new value of n, terminating when n = 1. For example, the following sequence of numbers will be generated for n = 22:</p>
-
-<pre><code>22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1
-</code></pre>
-
-<p>It is conjectured (but not yet proven) that this algorithm will terminate at n = 1 for every integer n. Still, the conjecture holds for all integers up to at least 1, 000, 000.
-For an input n, the cycle-length of n is the number of numbers generated up to and including the 1. In the example above, the cycle length of 22 is 16. Given any two numbers i and j, you are to determine the maximum cycle length over all numbers between i and j, including both endpoints.</p>
+<hr><p>A common typing error is to place your hands on the keyboard one row to the right of the correct position. Then "Q" is typed as "W" and "J" is typed as "K" and so on. Your task is to decode a message typed in this manner.</p>
 
 <h3>Input</h3>
 
-<p>The input will consist of a series of pairs of integers i and j, one pair of integers per line. All integers will be less than 1,000,000 and greater than 0.</p>
+<p>Input consists of several lines of text. Each line may contain digits, spaces, uppercase letters (except "Q", "A", "Z"), or punctuation shown above [except back-quote (`)]. Keys labeled with words [Tab, BackSp, Control, etc.] are not represented in the input.</p>
 
 <h3>Output</h3>
 
-<p>For each pair of input integers i and j, output i, j in the same order in which they appeared in the input and then the maximum cycle length for integers between and including i and j. These three numbers should be separated by one space, with all three numbers on one line and with one line of output for each line of input.</p>
+<p>You are to replace each letter or punctuation symbol by the one immediately to its left on the QWERTY keyboard shown above. Spaces in the input should be echoed in the output.</p>
 
 <h3>Sample Input</h3>
 
-<pre><code>1 10
-100 200
-201 210
-900 1000
+<pre><code>O S, GOMR YPFSU/
 </code></pre>
 
 <h3>Sample Output</h3>
 
-<pre><code>1 10 20
-100 200 125
-201 210 89
-900 1000 174
+<pre><code>I AM FINE TODAY.
 </code></pre>
 
 <p>　
 　</p>
 
-<h2>P002 : Jolly Jumpers</h2>
+<h2>P004 : Vito's Family</h2>
 
-<hr><p>A sequence of n &gt; 0 integers is called a jolly jumper if the absolute values of the differences between successive elements take on all possible values 1 through n - 1. For instance,</p>
+<hr><p>The famous gangster Vito Deadstone is moving to New York. He has a very big family there, all of them living on Lamafia Avenue. Since he will visit all his relatives very often, he wants to find a house close to them.</p>
 
-<pre><code>1 4 2 3
-</code></pre>
-
-<p>is a jolly jumper, because the absolute differences are 3, 2, and 1, respectively. The definition implies that any sequence of a single integer is a jolly jumper. Write a program to determine whether each of a number of sequences is a jolly jumper.</p>
+<p>Indeed, Vito wants to minimize the total distance to all of his relatives and has blackmailed you to write a program that solves his problem.</p>
 
 <h3>Input</h3>
 
-<p>Each line of input contains an integer n &lt; 3, 000 followed by n integers representing the sequence.</p>
+<p>The input consists of several test cases. The first line contains the number of test cases.
+For each test case you will be given the integer number of relatives r (0 &lt; r &lt; 500) and the street numbers (also integers) s1, s2, ... , si, ... , sr where they live (0 &lt; si &lt; 30, 000). Note that several relatives might live at the same street number.</p>
 
 <h3>Output</h3>
 
-<p>For each line of input generate a line of output saying "Jolly" or "Not jolly".</p>
+<p>For each test case, your program must write the minimal sum of distances from the optimal Vito's house to each one of his relatives. The distance between two street numbers si and sj is dij = | si - sj|.</p>
 
 <h3>Sample Input</h3>
 
-<pre><code>4 1 4 2 3
-5 1 4 2 -1 6
+<pre><code>2
+2 2 4 
+3 2 4 6
 </code></pre>
 
 <h3>Sample Output</h3>
 
-<pre><code>Jolly
-Not jolly
+<pre><code>2
+4
 </code></pre>
       </section>
       <footer>
