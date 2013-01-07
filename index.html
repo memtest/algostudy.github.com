@@ -18,61 +18,70 @@
         <h1>Algorithm Study</h1>
         <p>ALGORITHM</p>
 
-        <p class="view"><a href="http://64.23.76.89/">Web SSH</a></p>
-        <p class="view"><a href="http://github.com/algostudy/algorithm">Code Review</a></p>
+
+        <p class="view"><a href="https://github.com/algostudy">View My GitHub Profile</a></p>
 
       </header>
       <section>
-        <h2>P003 : WERTYU</h2>
+        <h2>P005 : Primary Arithmetic</h2>
 
-<hr><p>A common typing error is to place your hands on the keyboard one row to the right of the correct position. Then "Q" is typed as "W" and "J" is typed as "K" and so on. Your task is to decode a message typed in this manner.</p>
+<hr><p>Children are taught to add multi-digit numbers from right to left, one digit at a time. Many find the "carry" operation, where a 1 is carried from one digit position to the next, to be a significant challenge. Your job is to count the number of carry operations for each of a set of addition problems so that educators may assess their difficulty.</p>
 
 <h3>Input</h3>
 
-<p>Input consists of several lines of text. Each line may contain digits, spaces, uppercase letters (except "Q", "A", "Z"), or punctuation shown above [except back-quote (`)]. Keys labeled with words [Tab, BackSp, Control, etc.] are not represented in the input.</p>
+<p>Each line of input contains two unsigned integers less than 10 digits. The last line of input contains "0 0".</p>
 
 <h3>Output</h3>
 
-<p>You are to replace each letter or punctuation symbol by the one immediately to its left on the QWERTY keyboard shown above. Spaces in the input should be echoed in the output.</p>
+<p>For each line of input except the last, compute the number of carry operations that result from adding the two numbers and print them in the format shown below.</p>
 
 <h3>Sample Input</h3>
 
-<pre><code>O S, GOMR YPFSU/
+<pre><code>123 456
+555 555
+123 594
+0 0
 </code></pre>
 
 <h3>Sample Output</h3>
 
-<pre><code>I AM FINE TODAY.
+<pre><code>0
+3
+1
 </code></pre>
 
 <p>　
 　</p>
 
-<h2>P004 : Vito's Family</h2>
+<h2>P006 : How Many Fibs?</h2>
 
-<hr><p>The famous gangster Vito Deadstone is moving to New York. He has a very big family there, all of them living on Lamafia Avenue. Since he will visit all his relatives very often, he wants to find a house close to them.</p>
+<hr><p>Recall the definition of the Fibonacci numbers: </p>
 
-<p>Indeed, Vito wants to minimize the total distance to all of his relatives and has blackmailed you to write a program that solves his problem.</p>
+<pre><code>fibo(1) = 1
+fibo(2) = 2
+fibo(n) = fibo(n - 1) + fibo(n - 2)       (n ≥ 3)
+</code></pre>
+
+<p>Given two numbers a and b, calculate how many Fibonacci numbers are in the range [a, b].</p>
 
 <h3>Input</h3>
 
-<p>The input consists of several test cases. The first line contains the number of test cases.
-For each test case you will be given the integer number of relatives R (0 &lt; R &lt; 500) and the street numbers (also integers) S1, S2, ... , Si, ... , Sr where they live (0 &lt; Si &lt; 30, 000). Note that several relatives might live at the same street number.</p>
+<p>The input contains several test cases. Each test case consists of two non-negative integer numbers a and b. Input is terminated by a = b = 0. Otherwise, a ≤ b ≤ 10^100. The numbers a and b are given with no superfluous leading zeros.</p>
 
 <h3>Output</h3>
 
-<p>For each test case, your program must write the minimal sum of distances from the optimal Vito's house to each one of his relatives. The distance between two street numbers Si and Sj is Dij = |Si - Sj|.</p>
+<p>For each test case output on a single line the number of Fibonacci numbers fibo(i) with a ≤ fibo(i) ≤ b.</p>
 
 <h3>Sample Input</h3>
 
-<pre><code>2
-2 2 4 
-3 2 4 6
+<pre><code>10 100
+1234567890 9876543210
+0 0
 </code></pre>
 
 <h3>Sample Output</h3>
 
-<pre><code>2
+<pre><code>5
 4
 </code></pre>
       </section>
