@@ -15,6 +15,14 @@
 	<script>
 		$(function() {
 
+			var info = $.getJSON("./start.json", null, function(a_data) {
+			});
+
+			$.when(info)
+				.done(function(a_data) {
+					console.log(a_data);
+				})
+
 
 			/*$.getJSON("./start.json", null, function(a_data) {
 				base = new Date(a_data.year, a_data.month - 1, a_data.day);
@@ -26,22 +34,28 @@
 
 			});*/
 
+			// getProblemNumbers
+/*
 			$.getProblemNumbers = function() {
 
 				$.getJSON("./start.json", null, function(a_data) {
 
 					var base = new Date(a_data.year, a_data.month - 1, a_data.day);
 					var current = new Date();
-
 					var number = a_data.number + 2 *
-								parseInt((current.getTime() - base.getTime())
-									/ 1000	//millisecond
-									/ 60
-									/ 60
-									/ 24
-									/ 7);
+								parseInt((current.getTime() - base.getTime())	// milliseconds
+									/ 1000	// seconds
+									/ 60	// minutes
+									/ 60	// hours
+									/ 24	// days
+									/ 7);	// weeks
 
-					console.log(number);
+					var numberString = number.toString();
+					var paddingLength = 3 - numberString.length;
+
+					for ( var i = 0; i < paddingLength; i++ )
+						numberString = "0" + num
+
 				});
 			};
 
@@ -71,7 +85,7 @@
 					"<h3>Sample Output</h3><pre><code>" + a_data.sample_output + "</code></pre><br><br>"
 				);
 			});
-
+*/
 			/*$.ajax({
 				type: "GET",
 				url : "./test.json",
