@@ -14,7 +14,17 @@
 	<script src="./jquery.min.js"></script>
 	<script>
 		$(function() {
-			alert("sdfsdf");
+
+			$.getJSON("./test.json", null, function(a_data, a_status) {
+				console(a_data);
+			});
+
+			/*$.ajax({
+				type: "POST",
+				url : "./test.json",
+				dataType : "json",
+			});
+			alert("sdfsdf");*/
 		});
 	</script>
   </head>
