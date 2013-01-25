@@ -23,7 +23,10 @@
 			});
 
 			$.when(info, hello)
-				.done(function(a_data) {
+				.then(function(a_data) {
+					console.log(a_data);
+				})
+				.then(function(a_data) {
 					console.log(a_data);
 				});
 
