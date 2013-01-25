@@ -21,18 +21,48 @@
 				dataType : "json"
 			});
 
-			var p1 = null;
-			var p2 = null;
+		//	var p1 = null;
+		//	var p2 = null;
+
+			$.getProblemNubers = function(a_data) {
+
+				var base = new Date(a_data.year, a_data.month - 1, a_data.day);
+				var current = new Date();
+				var number1 = a_data.number + 2 *
+							parseInt((current.getTime() - base.getTime())	// milliseconds
+								/ 1000	// seconds
+								/ 60	// minutes
+								/ 60	// hours
+								/ 24	// days
+								/ 7);	// weeks
+				var number2 = number1 + 1;
+
+				var numberString1 = number1.toString();
+				var paddingLength1 = 3 - numberString1.length;
+
+				for ( var i = 0; i < paddingLength1; i++ )
+					numberString1 = "0" + numberString1;
+
+				var numberString2 = number2.toString();
+				var paddingLength2 = 3 - numberString2.length;
+
+				for ( var i = 0; i < paddingLength2; i++ )
+					numberString2 = "0" + numberString2;
+
+				return [numberString1, numberString2];
+			});
 
 			$.when(config).done(function(a_data) {
 
-				p1 = $.ajax({
+				console.log($.getProblemNumbers(a_data));
+
+		/*		p1 = $.ajax({
 					url		 : "./test.json",
 					type	 : "GET",
 					dataType : "json"
 				});
 			$.when(p1).done(function(a_data) {
-				console.log(a_data);
+				console.log(a_data);*/
 
 			});
 
