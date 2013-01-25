@@ -18,14 +18,24 @@
 			var config = $.ajax({
 				url		 : "./config.json",
 				type	 : "GET",
-				dataType : "json",
-			});
-			config.resolve({
-				url : "./tttt.json"
+				dataType : "json"
 			});
 
+			var p1 = null;
+			var p2 = null;
+
 			$.when(config).done(function(a_data) {
-				console.log("sfsdf");
+
+				p1 = $.ajax({
+					url		 : "./test.json",
+					type	 : "GET",
+					dataType : "json"
+				});
+			});
+
+			$when(p1).done(function(a_data) {
+				console.log(a_data);
+				
 			});
 
 
