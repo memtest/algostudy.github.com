@@ -15,6 +15,8 @@
 	<script>
 		$(function() {
 
+			alert(new Date());
+
 			$.getJSON("./test.json", null, function(a_data, a_status) {
 				console.log(a_data);
 				$("#p1").html(
