@@ -22,6 +22,7 @@
 				cache	 : false
 			});
 
+/*
 			$.ajax({
 				url : "./problems/config.json",
 				type : "GET",
@@ -34,6 +35,7 @@
 					console.log(c.getResponseHeader("Date"));
 				}
 			});
+*/
 
 			$.getProblemNumbers = function(a_data) {
 
@@ -75,7 +77,9 @@
 				);
 			};
 
-			$.when(config).done(function(a_data) {
+			$.when(config).done(function(a_data, b, c) {
+				console.log(c);
+				console.log(b);
 
 				var numbers = $.getProblemNumbers(a_data);
 
