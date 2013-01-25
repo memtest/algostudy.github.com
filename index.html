@@ -21,9 +21,6 @@
 				dataType : "json"
 			});
 
-		//	var p1 = null;
-		//	var p2 = null;
-
 			$.getProblemNumbers = function(a_data) {
 
 				var base = new Date(a_data.year, a_data.month - 1, a_data.day);
@@ -54,17 +51,23 @@
 
 			$.when(config).done(function(a_data) {
 
-				console.log($.getProblemNumbers(a_data));
+				var numbers = $.getProblemNumbers(a_data);
 
-		/*		p1 = $.ajax({
-					url		 : "./test.json",
+				var p1 = $.ajax({
+					url 	 : "./" + numbers[0] + ".json",
 					type	 : "GET",
 					dataType : "json"
 				});
-			$.when(p1).done(function(a_data) {
-				console.log(a_data);*/
 
-				
+				var p2 = $.ajax({
+					url 	 : "./" + numbers[0] + ".json",
+					type	 : "GET",
+					dataType : "json"
+				});
+
+				$.when(p1, p2).done(function(a_data) {
+					console.log(a_data);
+				});
 			});
 
 
