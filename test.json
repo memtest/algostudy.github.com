@@ -1,7 +1,8 @@
 {
 	"title" : "P009 : HELLO",
+	"description" : "hello<br>hello",
 	"input" : "sibal",
-	"output" : "sibal",
+	"output" : "sibal\nsfsdfsd",
 	"sample_input" : "3\n10",
 	"sample_output" : "10\n20 30\n1"
 }
