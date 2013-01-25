@@ -25,11 +25,13 @@
 				type: "GET",
 				url : "./test.json",
 				dataType : "json",
-				success : function() {
-					alert("sfsdf");
+				success : function(a_result) {
+					alert("sfff");
+				},
+				error : function(a_result) {
+					alert("error");
 				}
 			});
-			alert("sdfsdf");
 		});
 	</script>
   </head>
