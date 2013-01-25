@@ -22,25 +22,10 @@
 				cache	 : false
 			});
 
-/*
-			$.ajax({
-				url : "./problems/config.json",
-				type : "GET",
-				dataType : "json",
-				cache : false,
-				success : function(a, b, c) {
-					console.log(a);
-					console.log(b);
-					console.log(c);
-					console.log(c.getResponseHeader("Date"));
-				}
-			});
-*/
-
-			$.getProblemNumbers = function(a_data) {
+			$.getProblemNumbers = function(a_data, a_date) {
 
 				var base = new Date(a_data.year, a_data.month - 1, a_data.day);
-				var current = new Date();
+				var current = new Date(a_date);
 				var number1 = a_data.number + 2 *
 							parseInt((current.getTime() - base.getTime())	// milliseconds
 								/ 1000	// seconds
@@ -77,11 +62,9 @@
 				);
 			};
 
-			$.when(config).done(function(a_data, b, c) {
-				console.log(c);
-				console.log(b);
+			$.when(config).done(function(a_data, a_status, a_xhr) {
 
-				var numbers = $.getProblemNumbers(a_data);
+				var numbers = $.getProblemNumbers(a_data, a_xhr.getResponseHeader("Date"));
 
 				var p1 = $.ajax({
 					url 	 : "./problems/p" + numbers[0] + ".json",
