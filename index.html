@@ -16,12 +16,12 @@
 		$(function() {
 
 			alert("test");
-			/*$.getJSON("./test.json", null, function(a_data, a_status) {
-				console(a_data);
+			$.getJSON("./test.json", null, function(a_data, a_status) {
+				console.log(a_data);
 				alert("test");
-			});*/
+			});
 
-			$.ajax({
+			/*$.ajax({
 				type: "GET",
 				url : "./test.json",
 				dataType : "json",
@@ -31,7 +31,7 @@
 				error : function(a_result) {
 					console.log(a_result);
 				}
-			});
+			});*/
 		});
 	</script>
   </head>
