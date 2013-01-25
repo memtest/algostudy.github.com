@@ -18,10 +18,14 @@
 			var info = $.getJSON("./start.json", null, function(a_data) {
 			});
 
-			$.when(info)
+			var hello = $.getJSON("./test.json", null, function(a_data) {
+				
+			});
+
+			$.when(info, hello)
 				.done(function(a_data) {
 					console.log(a_data);
-				})
+				});
 
 
 			/*$.getJSON("./start.json", null, function(a_data) {
