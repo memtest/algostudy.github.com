@@ -15,8 +15,10 @@
 	<script>
 		$(function() {
 
+			alert("test");
 			$.getJSON("./test.json", null, function(a_data, a_status) {
 				console(a_data);
+				alert("test");
 			});
 
 			/*$.ajax({
