@@ -15,6 +15,18 @@
 	<script>
 		$(function() {
 
+			var config = $.ajax({
+				url		 : "./config.json",
+				type	 : "POST",
+				dataType : "json",
+			});
+
+			config.done(function(a_data) {
+				console.log(a_data);
+			});
+
+			/*
+
 			var info = $.getJSON("./start.json", null, function(a_data) {
 			});
 
@@ -30,6 +42,7 @@
 					console.log(a_data1);
 					console.log(a_data2);
 				});
+				*/
 
 
 			/*$.getJSON("./start.json", null, function(a_data) {
