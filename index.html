@@ -16,17 +16,20 @@
 		$(function() {
 
 			alert("test");
-			$.getJSON("./test.json", null, function(a_data, a_status) {
+			/*$.getJSON("./test.json", null, function(a_data, a_status) {
 				console(a_data);
 				alert("test");
-			});
+			});*/
 
-			/*$.ajax({
-				type: "POST",
+			$.ajax({
+				type: "GET",
 				url : "./test.json",
 				dataType : "json",
+				success : function() {
+					alert("sfsdf");
+				}
 			});
-			alert("sdfsdf");*/
+			alert("sdfsdf");
 		});
 	</script>
   </head>
