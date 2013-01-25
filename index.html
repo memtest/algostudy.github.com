@@ -20,10 +20,14 @@
 				type	 : "GET",
 				dataType : "json",
 			});
-
-			config.done(function(a_data) {
-				console.log(a_data);
+			config.resolve({
+				url : "./tttt.json"
 			});
+
+			$.when(config).done(function(a_data) {
+				console.log("sfsdf");
+			});
+
 
 			/*
 
