@@ -16,7 +16,7 @@
 		$(function() {
 
 			$.getJSON("./start.json", null, function(a_data) {
-				base = new Date(2013, 0, 21);
+				base = new Date(2013, 00, 21);
 				current = new Date();
 
 				number = a_data.number + parseInt((current.getTime() - base.getTime()) / 1000 / 60 / 60 / 24 / 7) * 2;
