@@ -15,7 +15,14 @@
 	<script>
 		$(function() {
 
-			console.log(new Date(2012, 01, 25));
+
+			base = new Date(2012, 00, 21);
+			current = new Date();
+			diffrent = (base.getTime() - current.getTime()) / 1000 / 60 / 60 / 24;
+
+			console.log(diffrent);
+
+			
 
 			$.getJSON("./test.json", null, function(a_data, a_status) {
 				console.log(a_data);
