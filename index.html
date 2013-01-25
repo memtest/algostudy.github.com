@@ -15,7 +15,9 @@
 	<script>
 		$(function() {
 
-			$.getJSON("./start.json", null, function(a_data) {
+			$.getProblemNumbers();
+
+			/*$.getJSON("./start.json", null, function(a_data) {
 				base = new Date(a_data.year, a_data.month - 1, a_data.day);
 				current = new Date();
 
@@ -23,7 +25,26 @@
 
 				$.loadProblem(number);
 
-			});
+			});*/
+
+			$.getProblemNumbers = function() {
+
+				$.getJSON("./start.json", null, function(a_data) {
+
+					var base = new Date(a_data.year, a_data.month - 1, a_data.day);
+					var current = new Date();
+
+					var number = a_data.number + 2 *
+								parseInt((current.getTime() - base.getTime())
+									/ 1000	//millisecond
+									/ 60
+									/ 60
+									/ 24
+									/ 7);
+
+					console.log(number);
+				});
+			};
 
 			$.loadProblem = function(a_number) {
 
