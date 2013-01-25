@@ -49,7 +49,12 @@
 				for ( var i = 0; i < paddingLength2; i++ )
 					numberString2 = "0" + numberString2;
 
-				return [numberString1, numberString2];
+				var numbers = [];
+
+				numbers.push(numberString1);
+				numbers.push(numberString2);
+			
+				return numbers;
 			});
 
 			$.when(config).done(function(a_data) {
