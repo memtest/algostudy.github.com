@@ -18,7 +18,7 @@
 			alert("test");
 			$.getJSON("./test.json", null, function(a_data, a_status) {
 				console.log(a_data);
-				alert("test");
+				$("p1").innerHTML = "SFSDFSFSDFSD";
 			});
 
 			/*$.ajax({
@@ -48,6 +48,7 @@
 
       </header>
       <section>
+		<div id="p1"></div>
         <h2>P007 : Light, more light</h2>
 
 <hr><p>우리 학교에는 복도 불을 켜고 끄는 마부(Mabu)라는 사람이 있다. 전구마다 불을 켜고 끄는 스위치가 있다. 불이 꺼져 있을 때 스위치를 누르면 불이 켜지고 다시 스위치를 누르면 불이 꺼진다. 처음에는 모든 전구가 꺼져 있다.</p>
