@@ -18,7 +18,8 @@
 			var config = $.ajax({
 				url		 : "./problems/config.json",
 				type	 : "GET",
-				dataType : "json"
+				dataType : "json",
+				cache	 : false
 			});
 
 			$.getProblemNumbers = function(a_data) {
@@ -68,13 +69,15 @@
 				var p1 = $.ajax({
 					url 	 : "./problems/p" + numbers[0] + ".json",
 					type	 : "GET",
-					dataType : "json"
+					dataType : "json",
+					cache	 : false
 				});
 
 				var p2 = $.ajax({
 					url 	 : "./problems/p" + numbers[1] + ".json",
 					type	 : "GET",
-					dataType : "json"
+					dataType : "json",
+					cache	 : false
 				});
 
 				$.when(p1, p2).done(function(a_data1, a_data2) {
