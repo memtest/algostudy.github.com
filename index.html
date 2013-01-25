@@ -65,8 +65,9 @@
 					dataType : "json"
 				});
 
-				$.when(p1, p2).done(function(a_data) {
-					console.log(a_data);
+				$.when(p1, p2).done(function(a_data1, a_data2) {
+					console.log(a_data1);
+					console.log(a_data2);
 				});
 			});
 
