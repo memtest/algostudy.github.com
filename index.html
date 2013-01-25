@@ -22,6 +22,18 @@
 				cache	 : false
 			});
 
+			$.ajax({
+				url : "./problems/config.json",
+				type : "GET",
+				dataType : "json",
+				cache : false,
+				success : function(a, b, c) {
+					console.log(a);
+					console.log(b);
+					console.log(c);
+				});
+			});
+
 			$.getProblemNumbers = function(a_data) {
 
 				var base = new Date(a_data.year, a_data.month - 1, a_data.day);
