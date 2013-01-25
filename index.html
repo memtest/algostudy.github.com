@@ -15,10 +15,16 @@
 	<script>
 		$(function() {
 
-			alert("test");
 			$.getJSON("./test.json", null, function(a_data, a_status) {
 				console.log(a_data);
-				$("#p1").html("<h2>sdfsdfsdf</h2>");
+				$("#p1").html(
+					"<h2>" + a_data.title + "</h2>" +
+					"<hr><p>" + a_data.description + "</p>" +
+					"<h3>Input</h3><p>" + a_data.input + "</p>" +
+					"<h3>Output</h3><p>" + a_data.output + "</p>" +
+					"<h3>Sample Input</h3><pre><code>" + a_data.sample_input + "</code></pre>" +
+					"<h3>Sample Output</h3><pre><code>" + a_data.sample_input + "</code></pre>"
+				);
 			});
 
 			/*$.ajax({

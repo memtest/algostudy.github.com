@@ -1,3 +1,7 @@
 {
-	"test" : "sibal"
+	"title" : "P009 : HELLO",
+	"input" : "sibal",
+	"output" : "sibal",
+	"sample_input" : "3\n10",
+	"sample_output" : "10\n20 30\n1"
 }
