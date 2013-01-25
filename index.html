@@ -11,12 +11,12 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-	<script src="./jquery.min.js"></script>
+	<script src="./javascripts/jquery.min.js"></script>
 	<script>
 		$(function() {
 
 			var config = $.ajax({
-				url		 : "./config.json",
+				url		 : "./problems/config.json",
 				type	 : "GET",
 				dataType : "json"
 			});
@@ -54,13 +54,13 @@
 				var numbers = $.getProblemNumbers(a_data);
 
 				var p1 = $.ajax({
-					url 	 : "./" + numbers[0] + ".json",
+					url 	 : "./problems/p" + numbers[0] + ".json",
 					type	 : "GET",
 					dataType : "json"
 				});
 
 				var p2 = $.ajax({
-					url 	 : "./" + numbers[0] + ".json",
+					url 	 : "./problems/p" + numbers[0] + ".json",
 					type	 : "GET",
 					dataType : "json"
 				});
