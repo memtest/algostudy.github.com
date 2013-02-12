@@ -43,34 +43,6 @@
 					return strReturn;
 			};
 			
-			var problem = $.getParam("p");
-			
-			if ( problem != null )
-			{
-				alert(problem);
-				
-				var p = $.ajax({
-					url 	 : "./problems/" + problem + ".json",
-					type	 : "GET",
-					dataType : "json",
-					cache	 : false
-				});
-
-				$.when(p).done(function(a_data) {
-
-					$.loadProblems("#p1", a_data[0]);
-				});
-				
-				return;
-			}
-
-			var config = $.ajax({
-				url		 : "./problems/config.json",
-				type	 : "GET",
-				dataType : "json",
-				cache	 : false
-			});
-
 			$.getProblemNumbers = function(a_data, a_date) {
 
 				var base = new Date(a_data.year, a_data.month - 1, a_data.day);
@@ -110,32 +82,62 @@
 					"<h3>Sample Output</h3><pre><code>" + a_data.sample_output + "</code></pre><br><br>"
 				);
 			};
-
-			$.when(config).done(function(a_data, a_status, a_xhr) {
-
-				var numbers = $.getProblemNumbers(a_data, a_xhr.getResponseHeader("Date"));
-
-				var p1 = $.ajax({
-					url 	 : "./problems/p" + numbers[0] + ".json",
+			
+			var problem = $.getParam("p");
+			
+			if ( problem != null )
+			{
+				alert(problem);
+				
+				var p = $.ajax({
+					url 	 : "./problems/" + problem + ".json",
 					type	 : "GET",
 					dataType : "json",
 					cache	 : false
 				});
 
-				var p2 = $.ajax({
-					url 	 : "./problems/p" + numbers[1] + ".json",
+				$.when(p).done(function(a_data) {
+
+					$.loadProblems("#p1", a_data[0]);
+				});
+				
+				return;
+			}
+			else
+			{
+				var config = $.ajax({
+					url		 : "./problems/config.json",
 					type	 : "GET",
 					dataType : "json",
 					cache	 : false
 				});
 
-				$.when(p1, p2).done(function(a_data1, a_data2) {
+				$.when(config).done(function(a_data, a_status, a_xhr) {
 
-					$.loadProblems("#p1", a_data1[0]);
-					$.loadProblems("#p2", a_data2[0]);
-				}); // p1, p2 done
-			});		// config done
-		});			// body onload
+					var numbers = $.getProblemNumbers(a_data, a_xhr.getResponseHeader("Date"));
+
+					var p1 = $.ajax({
+						url 	 : "./problems/p" + numbers[0] + ".json",
+						type	 : "GET",
+						dataType : "json",
+						cache	 : false
+					});
+	
+					var p2 = $.ajax({
+						url 	 : "./problems/p" + numbers[1] + ".json",
+						type	 : "GET",
+						dataType : "json",
+						cache	 : false
+					});
+
+					$.when(p1, p2).done(function(a_data1, a_data2) {
+
+						$.loadProblems("#p1", a_data1[0]);
+						$.loadProblems("#p2", a_data2[0]);
+					});	// p1, p2 done
+				});		// config done
+			}
+		});				// body onload
 
 	</script>
   </head>
