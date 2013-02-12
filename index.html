@@ -86,9 +86,7 @@
 			var problem = $.getParam("p");
 			
 			if ( problem != null )
-			{
-				alert(problem);
-				
+			{				
 				var p = $.ajax({
 					url 	 : "./problems/" + problem + ".json",
 					type	 : "GET",
@@ -97,10 +95,8 @@
 				});
 
 				$.when(p).done(function(a_data) {
-					
-					console.log(a_data);
 
-					$.loadProblems("#p1", a_data[0]);
+					$.loadProblems("#p1", a_data);
 				});
 				
 				return;
