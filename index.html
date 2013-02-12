@@ -48,6 +48,20 @@
 			if ( problem != null )
 			{
 				alert(problem);
+				
+				var p = $.ajax({
+					url 	 : "./problems/" + problem + ".json",
+					type	 : "GET",
+					dataType : "json",
+					cache	 : false
+				});
+
+				$.when(p).done(function(a_data) {
+
+					$.loadProblems("#p1", a_data[0]);
+				});
+				
+				return;
 			}
 
 			var config = $.ajax({
