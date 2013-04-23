@@ -47,7 +47,7 @@
 
 				var base = new Date(a_data.year, a_data.month - 1, a_data.day);
 				var current = new Date(a_date);
-				var number1 = a_data.number + 2 *
+				var number1 = a_data.number + 1 *
 							parseInt((current.getTime() - base.getTime())	// milliseconds
 								/ 1000	// seconds
 								/ 60	// minutes
@@ -121,17 +121,17 @@
 						cache	 : false
 					});
 	
-					var p2 = $.ajax({
+					/*var p2 = $.ajax({
 						url 	 : "./problems/p" + numbers[1] + ".json",
 						type	 : "GET",
 						dataType : "json",
 						cache	 : false
-					});
+					});*/
 
 					$.when(p1, p2).done(function(a_data1, a_data2) {
 
 						$.loadProblems("#p1", a_data1[0]);
-						$.loadProblems("#p2", a_data2[0]);
+						/*$.loadProblems("#p2", a_data2[0]);*/
 					});	// p1, p2 done
 				});		// config done
 			}
