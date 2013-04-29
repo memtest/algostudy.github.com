@@ -4,5 +4,5 @@
   "input" : "입력은 두 줄씩 들어온다. 첫 번째 줄의 시작은 Q 또는 S이다. Q이면 Queue이고, S이면 Stack이다. 다음으로는 원소의 개수 N(1 <= N <= 1000)이 들어온다. N이후로 첫 번째 줄 끝까지 N개의 원소들이 나열된다. 이 N개의 원소들은 Queue 또는 Stack에 Enqueue 또는 Push 된다. 두 번째 줄의 시작은 연산의 갯수 M(1 <= M <= 1000)이 들어온다. M이후로 두 번째 줄 끝까지 M개의 연산들이 나열된다. 각 연산은 다음과 같다.<br><br><b>Stack</b><br> - <b>P</b>ush : Stack에 삽입한다.<br> - p<b>O</b>p : Stack의 가장 꼭대기 원소를 꺼낸다.<br> - <b>S</b>ize : 현재 Stack의 사이즈를 출력한다.<br> - <b>T</b>op : Stack의 가장 꼭대기 원소를 꺼내지 않고 반환한다.<br><br><b>Queue</b><br> - <b>E</b>nqueue : Queue에 삽입한다.<br> - <b>D</b>equeue : Queue에서 원소를 하나 꺼낸다.<br> - <b>S</b>ize : 현재 Queue의 사이즈를 출력한다.<br> - <b>F</b>ront ; Queue의 원소를 꺼내지 않고 반환만 한다.<br><br>전체 입력의 끝은 파일의 끝이다.",
   "output" : "각 연산에서 Pop, Top, Dequeue, Front, Size에 해당하는 연산인 경우 출력한다. 즉, Push, Enqueue인 경우는 별도로 출력하지 않는다. Sample Input/Output을 통해 살펴보면 이해가 쉽다.",
   "sample_input" : "Q 5 3 2 1 2 7\n7 E 9 D D D F S D\nS 3 1 2 3\n4 S P 7 T O",
-  "sample_output" : "3 2 1 2 3 2\n4 7 7"
+  "sample_output" : "3 2 1 2 3 2\n3 7 7"
 }
