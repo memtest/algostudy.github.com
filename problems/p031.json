@@ -1,6 +1,6 @@
 {
-  "title" : "P : ",
-  "description" : "",
+  "title" : "P031 : 동맹 휴업",
+  "description" : "방글라데시의 정당들은 자신의 세를 과시하기 위해 정기적인 동맹 휴업(파업)을 추진하는데, 이 동맹 휴업은 경제에 상당한 피해를 끼칠 수 있다. 이 문제에서는 각 당을 동맹 휴업지수(hartal parameter)라고 부르는 h라는 양의 정수로 나타낼 수 있다고 하자. 이 동맹 휴업 지수는 한 동맹 휴업과 다음 동맹 휴업 사이의 기간을 날짜 수로 표시한 값이다.<br><br>세 개의 정당이 있다고 생각해보자. 그리고 i번째 당의 동맹 휴업 지수를 h1라고 할 때 h1 = 3, h2 = 4, h3 = 8이라고 가정하자. N일(N=14)일 동안의 세 당의 행보를 시뮬레이션하면 다음과 같이 표시할 수 있다. 시뮬레이션은 항상 일요일에 시작하며 금요일이나 토요일에는 동맹 휴업이 없다.<br><br><table><tr><td>요일</td><td>1<br>일</td><td>2<br>월</td><td>3<br>화</td><td>4<br>수</td><td>5<br>목</td><td>6<br>금</td><td>7<br>토</td><td>8<br>일</td><td>9<br>월</td><td>10<br>화</td><td>11<br>수</td><td>12<br>목</td><td>13<br>금</td><td>14<br>토</td></tr><tr><td>1번 정당</td><td></td><td></td><td>X</td><td></td><td></td><td>X</td><td></td><td></td><td>X</td><td></td><td></td><td>X</td><td></td><td></td></tr><tr><td>2번 정당</td><td></td><td></td><td></td><td>X</td><td></td><td></td><td></td><td>X</td><td></td><td></td><td></td><td>X</td><td></td><td></td></tr><tr><td>3번 정당</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>X</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>동맹 휴업</td><td></td><td></td><td>1</td><td>2</td><td></td><td></td><td></td><td>3</td><td>4</td><td></td><td></td><td>5</td><td></td><td></td></tr></table><br><br>이 결과를 보면 14일 동안 정확하게 다섯 번의 동맹 휴업(3, 4, 8, 9, 12일)이 있음을 알 수 있다. 6일은 금요일이기 때문에 동맹 휴업이 일어나지 않는다. 결국 2주 동안 근무 일수로 5일의 동맹 휴업이 실시된다.<br><br>몇 정당의 동맹 휴업 지수와, 어떤 정수 N이 주어졌을 때, N일 가운데 동맹 휴업으로 인해 일을 하지 않은 근무 일수를 계산하라.",
   "input" : "",
   "output" : "",
   "sample_input" : "",
