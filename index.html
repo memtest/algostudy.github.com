@@ -7,16 +7,15 @@
  </button>
 </div>
 <script>
-  document.getElementById("di").width = 200;
-  document.getElementById("di").height = 200;
+  document.getElementById("but").addEventListener("click", function() {
+    alert("but");
+  }, false);
 
   document.getElementById("di").addEventListener("click", function() {
     alert("di");
   }, false);
 
-  document.getElementById("but").addEventListener("click", function() {
-    alert("but");
-  }, false);
+
 </script>
 </body>
 </html>
