@@ -1,25 +1,23 @@
-
 <html>
 <head>
-<script>
-var slope = 0; var supportsOrientationChange = "onorientationchange" in window,
-orientationEvent = supportsOrientationChange ? "orientationchange" : "resize";
-window.addEventListener(orientationEvent, function() {
-
-  if (slope!=window.orientation){
-
-  slope = window.orientation;
-
-  if(slope == 90 || slope == -90) {
-
-      alert('기울었네');
-
-  }}
-
-}, false);
-</script>
 </head>
 <body>
+<div id="di">
+ <button id="but">
+ </button>
+</div>
+<script>
+  document.getElementById("di").width = 200;
+  document.getElementById("di").height = 200;
+
+  document.getElementById("di").addEventListener("click", function() {
+    alert("di");
+  }, false);
+
+  document.getElementById("but").addEventListener("click", function() {
+    alert("but");
+  }, false);
+</script>
 </body>
 </html>
 
