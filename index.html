@@ -2,15 +2,20 @@
 <head>
 </head>
 <body>
-<input type='search'>
+<input type='search' id='kk'>
 <div id="di">
- <button id="but">
+ <button id="but" onclick='click();'>
  </button>
 </div>
 <script>
+
+function click() {
+	document.getElementById("kk").value= "";
+}
+/*
   document.getElementById("but").addEventListener("click", function() {
-    document.querySelector("input").value=" ";
-  }, false);
+    
+  }, false);*/
 
 
 </script>
